@@ -1,4 +1,4 @@
-```yaml
+
 name: Backend CI
 
 on:
@@ -32,4 +32,4 @@ jobs:
       - name: Build Docker image
         working-directory: backend
         run: docker build -t ecommerce-backend:ci .
-```
+
