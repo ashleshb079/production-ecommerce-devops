@@ -10,4 +10,13 @@ describe("Backend API", () => {
       "E-Commerce Backend API is running!"
     );
   });
+
+
+  
+  test("GET /health should return healthy status", async () => {
+    const response = await request(app).get("/health");
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.status).toBe("ok");
+  });
 });

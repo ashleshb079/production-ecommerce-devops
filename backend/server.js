@@ -24,6 +24,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+  });
+});
+
 app.get("/db-test", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW()");
